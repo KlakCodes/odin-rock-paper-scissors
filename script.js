@@ -1,3 +1,4 @@
+// Randomly return Rock, Paper or Scissors
 function getComputerChoice() {
     randNum = Math.floor(Math.random() * 3);
 
@@ -16,4 +17,24 @@ function getComputerChoice() {
     return compChoice;
 }
 
-console.log(getComputerChoice())
+// Ask the user to type Rock, Paper or Scissors
+function getHumanChoice(){
+    input = window.prompt("Rock, Paper or Scissors?").toLowerCase();
+
+    switch(input){
+        case "rock":
+            userChoice = "Rock"
+            break;
+        case "paper":
+            userChoice = "Paper"
+            break;
+        case "scissors":
+            userChoice = "Scissors"
+            break;
+        default:
+            getHumanChoice()
+            break;
+    }
+
+    return userChoice;
+}

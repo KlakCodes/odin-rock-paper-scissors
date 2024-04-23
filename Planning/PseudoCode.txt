@@ -1,0 +1,12 @@
+GET userInput
+GET randomised compInput
+
+WHILE userScore does not equal 3 or compScore does not equal 3
+    IF userInput beats compInput
+        INCREMENT userScore by 1
+    ELSE IF compInput beats userInput
+        INCREMENT compScore by 1
+    ELSE
+        BREAK
+    END IF
+END WHILE

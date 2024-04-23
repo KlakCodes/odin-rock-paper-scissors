@@ -42,6 +42,7 @@ function getHumanChoice() {
 let humanScore = 0;
 let computerScore = 0;
 
+// Take user and computer inputs and decide who wins the round
 function playRound(humanChoice, computerChoice) {
     if(humanChoice === "Rock" && computerChoice === "Scissors") {
         console.log("You win! Rock beats Scissors");
@@ -64,9 +65,16 @@ function playRound(humanChoice, computerChoice) {
     } else {
         console.log("Tie! Nobody wins this round");
     }
+
+    console.log("Player score: "+humanScore);
+    console.log("Computer score: "+computerScore);
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+function playGame(roundCount) {
+    for(i = 0; i < roundCount; i++) {
+        console.log("Round "+ (i + 1));
+        playRound(getHumanChoice(), getComputerChoice());
+    }
+}
 
-playRound(humanSelection, computerSelection);
+ playGame(5);

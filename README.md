@@ -1,2 +1,4 @@
 # odin-rock-paper-scissors
-The Odin Project - Project: Rock Paper Scissors
+This project is a console based game of Rock Paper Scissors.
+
+This will demonstrate my JavaScript skills that I have learnt through The Odin Project.

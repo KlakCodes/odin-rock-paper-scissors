@@ -75,6 +75,14 @@ function playGame(roundCount) {
         console.log("Round "+ (i + 1));
         playRound(getHumanChoice(), getComputerChoice());
     }
+
+    if(humanScore > computerScore) {
+        console.log("Player is the Winner!");
+    } else if(humanScore < computerScore) {
+        console.log("Computer is the winner!");
+    } else {
+        console.log("It's a tie!");
+    }
 }
 
  playGame(5);

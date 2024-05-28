@@ -72,6 +72,12 @@ function playRound(humanChoice, computerChoice) {
 
     player.textContent = "Player score: " + humanScore;
     computer.textContent = "Computer score: " + computerScore;
+
+    if (humanScore === 5) {
+        gameMsg.textContent = "Player has won!"
+    } else if (computerScore === 5) {
+        gameMsg.textContent = "Computer has won!"
+    }
 }
 
 window.addEventListener("DOMContentLoaded", (event) => {
@@ -82,15 +88,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
         switch(target.id) {
             case 'rock':
-                console.log('Rock');
                 playRound('Rock', getComputerChoice());
                 break;
             case 'paper':
-                console.log('Paper');
                 playRound('Paper', getComputerChoice());
                 break;
             case 'scissors':
-                console.log('Scissors');
                 playRound('Scissors', getComputerChoice());
                 break;
         }

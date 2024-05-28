@@ -1,6 +1,8 @@
+html,
 body {
     display: flex;
     flex-direction: column;
+    height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -69,4 +71,13 @@ h1 {
     background-color: lightcoral;
     color: white;
     font-weight: bold;
+}
+
+.editorNote {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: flex-end;
+    color: black;
+    font-size: 14px;
 }

@@ -89,6 +89,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     const gameBtns = document.querySelector('#gameBtns');
     const resetBtn = document.querySelector('.resetBtn');
 
+    // Take user choice and run playRound function
     gameBtns.addEventListener('click', (event) => {
         let target = event.target;
 
@@ -105,6 +106,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         }
     })
 
+    // Reset game state to original state
     resetBtn.addEventListener('click', () => {
         humanScore = 0;
         computerScore = 0;

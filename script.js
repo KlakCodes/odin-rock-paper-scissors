@@ -87,6 +87,7 @@ function playRound(humanChoice, computerChoice) {
 
 window.addEventListener("DOMContentLoaded", (event) => {
     const gameBtns = document.querySelector('#gameBtns');
+    const resetBtn = document.querySelector('.resetBtn');
 
     gameBtns.addEventListener('click', (event) => {
         let target = event.target;
@@ -102,5 +103,19 @@ window.addEventListener("DOMContentLoaded", (event) => {
                 playRound('Scissors', getComputerChoice());
                 break;
         }
+    })
+
+    resetBtn.addEventListener('click', () => {
+        humanScore = 0;
+        computerScore = 0;
+
+        document.querySelector('.gameMessage').textContent = "Choose your weapon of choice!";
+
+        document.querySelector('#player').textContent = "Player score: 0";
+        document.querySelector('#computer').textContent = "Computer score: 0";
+
+        document.querySelector('#rock').disabled = false;
+        document.querySelector('#paper').disabled = false;
+        document.querySelector('#scissors').disabled = false;
     })
 });

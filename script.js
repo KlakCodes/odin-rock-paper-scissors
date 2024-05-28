@@ -126,10 +126,24 @@ function playRound(humanChoice, computerChoice) {
 //playRound(getHumanChoice(), getComputerChoice());
 
 window.addEventListener("DOMContentLoaded", (event) => {
-    const rock = document.querySelector("#rockBtn");
-    if (rock) {
-        rock.addEventListener('click', () => {
-            console.log("Rock");
-        }, false);
-    }
+    const gameBtns = document.querySelector('#gameBtns');
+
+    gameBtns.addEventListener('click', (event) => {
+        let target = event.target;
+
+        switch(target.id) {
+            case 'rock':
+                console.log('Rock');
+                playRound('Rock', getComputerChoice());
+                break;
+            case 'paper':
+                console.log('Paper');
+                playRound('Paper', getComputerChoice());
+                break;
+            case 'scissors':
+                console.log('Scissors');
+                playRound('Scissors', getComputerChoice());
+                break;
+        }
+    })
 });

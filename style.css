@@ -11,12 +11,41 @@ h1 {
 button {
     width: 100px;
     height: 100px;
+    border-radius: 10px;
+    border-style: none;
+    background-color: blueviolet;
+    color: white;
+    font-weight: bold;
 }
 
-div {
+#gameBtns {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 20px;
+}
+
+.gameMessage {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+.scorePanel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.scoreCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lavender;
+    width: 200px;
+    height: 100px;
+    border-radius: 5px;
 }

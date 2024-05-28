@@ -73,10 +73,15 @@ function playRound(humanChoice, computerChoice) {
     player.textContent = "Player score: " + humanScore;
     computer.textContent = "Computer score: " + computerScore;
 
-    if (humanScore === 5) {
-        gameMsg.textContent = "Player has won!"
-    } else if (computerScore === 5) {
-        gameMsg.textContent = "Computer has won!"
+    if (humanScore === 5 || computerScore === 5) {
+        if (humanScore === 5) {
+            gameMsg.textContent = "Player has won!";
+        } else if (computerScore === 5) {
+            gameMsg.textContent = "Computer has won!";
+        }
+        document.querySelector('#rock').disabled = true;
+        document.querySelector('#paper').disabled = true;
+        document.querySelector('#scissors').disabled = true;
     }
 }
 
